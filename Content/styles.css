@@ -13,14 +13,14 @@ html{
 }
 
 body{
+    font:inherit;
+    font-family:"Minecraft Seven v2", sans-serif;
     padding:40px;
     background-color:black;
     color:white;
 }
 
 .nav{
-    font:inherit;
-    font-family:"Minecraft Seven v2", sans-serif;
     font-size:48px;
     padding: 5px;
     border:3px solid white;
