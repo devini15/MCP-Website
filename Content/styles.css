@@ -75,3 +75,19 @@ body{
     0% {background-position: 0 0    }
     100% {background-position: -500px 0}
 }
+
+.construction{
+
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color:mediumorchid;
+    background-image: repeating-linear-gradient(
+        45deg,
+        yellow,
+        yellow 10px,
+        transparent 10px,
+        transparent 20px
+    );
+
+}
