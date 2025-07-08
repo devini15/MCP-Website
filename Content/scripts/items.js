@@ -11,8 +11,8 @@ document.querySelectorAll('.itemDiv').forEach(div => {
 
     button.addEventListener('click', () => {
         //Make the item name and description transparent, CSS makes this fade out gently
-        text.style.opacity = 0;
-        name.style.opacity = 0;
+        text.style.opacity = "0";
+        name.style.opacity = "0";
 
         setTimeout(() => { //timeout will wait for the animation before swapping out the text
             toggled = !toggled;
@@ -29,8 +29,8 @@ document.querySelectorAll('.itemDiv').forEach(div => {
                 button.textContent = 'Show Enhanced';
             }
             //Fade the text back in now that it's been updated.
-            text.style.opacity = 1;
-            name.style.opacity = 1;
+            text.style.opacity = "1";
+            name.style.opacity = "1";
         }, 500);
     });
 });
