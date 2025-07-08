@@ -10,12 +10,13 @@ document.querySelectorAll('.itemDiv').forEach(div => {
     const enhName = div.getAttribute('enhanced-name');
 
     button.addEventListener('click', () => {
+        //Make the item name and description transparent, CSS makes this fade out gently
         text.style.opacity = 0;
         name.style.opacity = 0;
 
-        setTimeout(() => {
+        setTimeout(() => { //timeout will wait for the animation before swapping out the text
             toggled = !toggled;
-
+            //Set item name and text based on if we are looking at the enhanced item.
             if (toggled) {
                 div.style.border = '3px solid purple';
                 name.innerHTML = enhName;
@@ -27,9 +28,9 @@ document.querySelectorAll('.itemDiv').forEach(div => {
                 text.innerHTML = regText;
                 button.textContent = 'Show Enhanced';
             }
-
+            //Fade the text back in now that it's been updated.
             text.style.opacity = 1;
             name.style.opacity = 1;
-        }, 300);
+        }, 500);
     });
 });
