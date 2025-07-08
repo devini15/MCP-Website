@@ -36,13 +36,17 @@ body{
     font-size: 1.5em;
     border-radius: 0;
     border: 3px solid white;
-    transition: background-color 0.6s ease;
+    transition: border 1s ease;
     padding: 20px;
     margin: 5px 5px;
 }
 
 .description{
-    transition: opacity 0.3s ease;
+    transition: opacity 0.6s ease;
+}
+
+.itemName {
+    transition: opacity 0.6s ease;
 }
 
 .itemButton {
@@ -50,9 +54,19 @@ body{
     padding: 5px 5px;
     cursor: pointer;
     font: inherit;
-    background-color: #767676;
+    width:50%;
+    align-self: center;
+    background-color: #777777;
+    color: white;
 }
 
+.itemButton:hover {
+    background-color: #888888;
+}
+
+.itemButton:active {
+    background-color: #666666;
+}
 
 .nav{
     font-size:48px;
@@ -60,7 +74,7 @@ body{
     border:3px solid white;
     color:white;
     text-decoration:none;
-    margin: 5px 5px;
+    margin: 10px 5px;
 }
 
 .nav:hover{
