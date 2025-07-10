@@ -20,6 +20,21 @@ body{
     color:white;
 }
 
+.additions {
+    list-style-type: "+ ";
+    color: lime;
+}
+
+.changes {
+    list-style-type: "* ";
+    color: yellow;
+}
+
+.fixes {
+    list-style-type: "- ";
+    color:red;
+}
+
 .row{
     display: flex;
     flex-direction: row;
