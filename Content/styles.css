@@ -20,25 +20,33 @@ body{
     color:white;
 }
 
+/*Default hyperlink colors*/
+a{color:lime;}
+a:hover{color:deepskyblue;}
+a:active{color:red;}
+a:visited{color:yellow;}
+
+/*Changelog colors*/
 .additions {
     list-style-type: "+ ";
     color: lime;
 }
-
 .changes {
     list-style-type: "* ";
     color: yellow;
 }
-
 .fixes {
     list-style-type: "- ";
     color:red;
 }
 
+/*Use for laying elements out horizontally*/
 .row{
     display: flex;
     flex-direction: row;
 }
+
+/*For displaying items on the item page*/
 .itemDiv {
     width: 46%;
     height: 250px;
@@ -55,15 +63,12 @@ body{
     padding: 20px;
     margin: 5px 5px;
 }
-
 .description{
     transition: opacity 0.6s ease;
 }
-
 .itemName {
     transition: opacity 0.6s ease;
 }
-
 .itemButton {
     margin-top: auto;
     padding: 5px 5px;
@@ -74,15 +79,14 @@ body{
     background-color: #777777;
     color: white;
 }
-
 .itemButton:hover {
     background-color: #888888;
 }
-
 .itemButton:active {
     background-color: #666666;
 }
 
+/*Main navigation buttons (not actually buttons, use this class for <a> tag)*/
 .nav{
     font-size:48px;
     padding: 5px;
@@ -91,7 +95,6 @@ body{
     text-decoration:none;
     margin: 10px 5px;
 }
-
 .nav:hover{
     background: linear-gradient(to left, #f00,
     #ff2b00,
@@ -135,11 +138,13 @@ body{
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.nav:visited{color:white}
 @keyframes rainbow-move-left-right {
     0% {background-position: 0 0    }
     100% {background-position: -500px 0}
 }
 
+/*Temporary code until we debut the website*/
 .construction{
 
     position: relative;
