@@ -63,14 +63,11 @@ a:visited{color:yellow;}
     padding: 20px;
     margin: 5px 5px;
 }
-.description{
-    transition: opacity 0.6s ease;
-}
-.itemName {
-    transition: opacity 0.6s ease;
-}
-.itemButton {
-    margin-top: auto;
+.description {transition: opacity 0.6s ease;}
+.itemName {transition: opacity 0.6s ease;}
+.itemImage {transition: opacity 0.6s ease;}
+.mineButton {
+    margin: auto 5px 5px;
     padding: 5px 5px;
     cursor: pointer;
     font: inherit;
@@ -79,10 +76,10 @@ a:visited{color:yellow;}
     background-color: #777777;
     color: white;
 }
-.itemButton:hover {
+.mineButton:hover {
     background-color: #888888;
 }
-.itemButton:active {
+.mineButton:active {
     background-color: #666666;
 }
 

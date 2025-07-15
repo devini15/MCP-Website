@@ -5,6 +5,10 @@
     <title>MCP2 Items</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+    <style>
+        .itemDetails{color:yellow;}
+    </style>
 </head>
 <body>
 <!-- "\n" in the regular-text or enhanced-text attribute will be displayed as a newline on the site-->
@@ -24,7 +28,7 @@ My Ideas:
             <b class="itemName" style="color:red">Twice Dice</b>
         </div>
         <text class="description">Targeted player (can be yourself) rolls 2 dice next time they move.</text>
-        <button class="itemButton">Show Enhanced</button>
+        <button class="itemButton mineButton">Show Enhanced</button>
     </div>
 
     <div class="itemDiv" regular-name="Thrice Dice" enhanced-name="Weighted Thrice Dice"
@@ -35,7 +39,7 @@ My Ideas:
             <b class="itemName" style="color:cyan">Thrice Dice</b>
         </div>
         <text class="description">Targeted player (can be yourself) rolls 2 dice next time they move.</text>
-        <button class="itemButton">Show Enhanced</button>
+        <button class="itemButton mineButton">Show Enhanced</button>
     </div>
 </div>
 <div class="row">
@@ -47,18 +51,54 @@ My Ideas:
             <b class="itemName" style="color:rebeccapurple">Magic Dice</b>
         </div>
         <text class="description">Targeted player (can be yourself) rolls 2 dice next time they move.</text>
-        <button class="itemButton">Show Enhanced</button>
+        <button class="itemButton mineButton">Show Enhanced</button>
     </div>
 
     <div class="itemDiv" regular-name="Mini Dice" enhanced-name="Binary Dice"
          regular-text="Targeted player (can be yourself) will roll a 1, 2, or 3 the next time they move."
-         enhanced-text="Targeted player (can be yourself) will roll a 0 or 1 the next time they move.">
+         enhanced-text="Targeted player (can be yourself) will roll a 0 or 1 the next time they move."
+         regular-texture="assets/items/MiniDice.ico"
+         enhanced-texture="assets/items/BinaryDice.ico"
+         >
         <div>
-            <img src="assets/items/MiniDice.ico" alt="Mini Dice Texture">
+            <img class="itemImage" src="assets/items/MiniDice.ico" alt="Mini Dice Texture">
             <b class="itemName" style="color:darkcyan">Mini Dice</b>
         </div>
         <text class="description">Targeted player (can be yourself) rolls 2 dice next time they move. <br/>Stacks with Big Dice event.</text>
-        <button class="itemButton">Show Enhanced</button>
+        <button class="itemButton mineButton">Show Enhanced</button>
+    </div>
+</div>
+<div class="row">
+    <div class="itemDiv" regular-name="Item Name" enhanced-name="Enhanced Name"
+         regular-text="Verbatim in-game item description"
+         enhanced-text="Enhanced item description"
+         regular-details="Additional information regarding the item would go here.\nThis should work nicely but could be an issue if there is a LOT of extra information.\n For instance, if an item uses RNG with a custom weight table, we may want to include all the weights.\nThis text COULD be made smaller."
+         enhanced-details="A lot of items probably don't have many extra details.">
+        <div>
+            <img src="assets/items/placeholder.ico" alt="placeholder">
+            <b class="itemName" style="color:cyan">Item Name</b>
+        </div>
+        <text class="description">Verbatim in-game item description</text><br/>
+        <small class="itemDetails">
+            Additional information regarding the item would go here.<br/>
+            This should work nicely but could be an issue if there is a LOT of extra information.<br/>
+            For instance, if an item uses RNG with a custom weight table, we may want to include all the weights.<br/>
+            This text COULD be made smaller.
+        </small>
+        <button class="itemButton mineButton">Show Enhanced</button>
+    </div>
+    <div class="itemDiv" regular-name="Item Name" enhanced-name="Enhanced Name"
+         regular-text="Verbatim in-game item description"
+         enhanced-text="Enhanced item description">
+        <div>
+            <img src="assets/items/placeholder.ico" alt="placeholder">
+            <b class="itemName" style="color:cyan">Item Name</b>
+        </div>
+        <text class="description">Verbatim in-game item description</text><br/>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <button class="mineButton">Detailed Description</button>
+        </div>
     </div>
 </div>
 
