@@ -73,15 +73,45 @@ a:visited{color:yellow;}
     font: inherit;
     width:50%;
     align-self: center;
-    background-color: #777777;
+    background-color: #999999;
     color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
 }
 .mineButton:hover {
-    background-color: #888888;
+    background-color: #BBBBBB;
+    color: white;
 }
 .mineButton:active {
-    background-color: #666666;
+    background-color: #777777;
 }
+.mineA{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.mineA:hover {
+    color: white;
+    background-color: #BBBBBB;
+}
+.mineA:active {background-color: #777777;}
+
+.mineA:visited {color:white}
+
+.fakeButton{
+    width:50%;
+    height: 88%;
+    padding: 0;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    margin: auto 5px 5px;
+    cursor: pointer;
+    background:#999999;
+}
+.fakeButton:hover {background-color: #BBBBBB;}
+.fakeButton:active {background-color: #777777;}
 
 /*Main navigation buttons (not actually buttons, use this class for <a> tag)*/
 .nav{
