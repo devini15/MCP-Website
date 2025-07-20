@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+  <title>Beta 2.6</title>
+</head>
+<body>
+<h1 style="color:cyan">Minecraft Party Beta 2.6</h1>
+<br/>
+<h2 style="color:lime">Additions</h2>
+<ul class=additions>
+  <li>Free item pickups on Port Town</li>
+  <li>New Bone Hat available in hat room</li>
+  <li>New Dice-Block hat available to players who have won MCP2 at least once (rolls with you)</li>
+  <li>xDoubleH now in credits</li>
+  <li>Board-exclusive bonus star on Zen Garden (Luck Star)</li>
+  <li>Better lighting in Monster Shoot</li>
+  <li>Speed I is now granted to the team of 3 in Boss Brawl</li>
+  <li>Orange Spaces now show a roulette</li>
+  <li>More decorations on Zen Garden</li>
+  <li>NEW MINIGAME: Red Light, Green Light (ported from MCP1 with new map)</li>
+  <li>NEW board challenge: Trident Race (Zen Garden)</li>
+</ul>
+<br/>
+<h2 style="color:yellow">Changes</h2>
+<ul class=changes>
+  <li>Dripstone Dance Border is now Honey</li>
+  <li>World name now includes text colors</li>
+  <li>Lost City now uses large victory room</li>
+  <li>Coin pile coins now glow</li>
+  <li>Delayed give command for &quot;void minigame&quot; slimeball to ensure minigames are canceled properly</li>
+  <li>Increased Resistance in Dragon Doom (I → III)</li>
+  <li>Zen Garden hub preview now looks better</li>
+  <li>Music Disc challenge now costs 8 coins to attempt</li>
+  <li>Adjusted main options board to make board selection easier</li>
+  <li>Reroll Token is no longer a Yellow Space item</li>
+  <li>Reroll Token is now an Orange Space item</li>
+  <li>Minion Pet is now a Yellow Space item</li>
+  <li>Increased odds of getting a Twice Dice or Thrice Dice from an Orange Space</li>
+  <li>Added tip to increase FOV in Dripstone Dance</li>
+  <li>Player is now informed that they are only allowed to attempt Zen Garden&#39;s disc challenge once per turn</li>
+  <li>Delayed giving ready-up items in Whack-a-Mob to allow time for chunks to load</li>
+  <li>Edited Minion Pet description for concision and clarity</li>
+  <li>Minion Pet now spawns directly at the player</li>
+  <li>Minion Pet is now baby</li>
+  <li>Coin Piles now have more coins per pile (4-6 → 10-15)</li>
+  <li>Anvil Trap no longer available from Sacrificial Altar on Floating Islands</li>
+  <li>Coin Thief now available from Sacrificial Altar on Floating Islands</li>
+  <li>Minion Pet now available from Sacrificial Altar on Floating Islands</li>
+</ul>
+<br/>
+<h2 style="color:red">Fixes</h2>
+<ul class=fixes>
+  <li>Point scoreboard would show team stars in doubles in some minigames</li>
+  <li>Players would sometimes not get teleported to the Guardian boss fight on Lost City</li>
+  <li>Coin Snatcher text color differed between free item pickup message and yellow space message</li>
+  <li>Disc challenge sign on Zen Garden would target @a instead of the player selecting it</li>
+  <li>There was a space that did not count towards your roll on Zen Garden</li>
+  <li>Player pawn armor stands were still glowing during some minigames</li>
+  <li>If a player only had Lightning Traps and/or Minion Traps, the game would announce them having no items</li>
+  <li>Players being hit by a lightning trap would turn the star seller into a witch and get locked out of purchasing a star</li>
+  <li>Swap items does not swap some of the newer items</li>
+  <li>Sometimes, the Minion Pet would reduce the user&#39;s remaining spaces by one when swapped</li>
+  <li>One of Zen Garden&#39;s Battle Minigame spaces could be hit repeatedly to reduce roll count</li>
+  <li>Cosmetic grass path replaced with dirt block for no reason in Zen Garden</li>
+  <li>Mineshaft Madness failed to display points scoreboard after exiting practice mode and starting the game</li>
+  <li>North Zen Garden shop was assembled incorrectly</li>
+  <li>Zen Garden disc challenge would be considered failed if the skeleton fell down after killing the creeper</li>
+  <li>Some spots you could stand in Knockout were a little TOO good</li>
+  <li>Platforms in the battle/coin/duel minigame rooms would sometimes display the wrong colors</li>
+  <li>Under certain circumstances, getting a same spot duel would skip the whole duel</li>
+  <li>Some Star Sellers would face the wrong way in Zen Garden</li>
+  <li>A directional indicator arrow was missing in Zen Garden</li>
+  <li>One of the Pac-Maze gates was not operational</li>
+  <li>Zen Garden swords were not killed when the rest of the board entities were</li>
+  <li>There was ambiguity on one of the paths in Pearl Hurl</li>
+  <li>One of the Pac-Maze gates was &quot;missing stems&quot; (idk, man, that&#39;s what it says on the spreadsheet)</li>
+  <li>Music Disc challenge tellraw on Zen Garden spread misinformation on the internet</li>
+  <li>Player spots glowed when they shouldn&#39;t&#39;ve during the board phase</li>
+  <li>Item shop signs faced the wrong way in Zen Garden</li>
+  <li>Double titles in Roll Off if certain items are used</li>
+  <li>Players could double-dip on Zen Garden intersection spaces allowing backwards board traversal</li>
+  <li>Players who were in spectator mode before their turn started would be returned to spectator after killing the Elder Guardian on Lost City</li>
+  <li>Summoning additional Chance Time spaces on Lost City would put the additional spaces on Candyland instead</li>
+  <li>Randomly generated Last 5 Turns event could be the same event twice if a Crazy Clock was used</li>
+  <li>Using multiple Minion Pet items on the same turn would break the game</li>
+  <li>Text for receiving a Mini Dice would put the hover event on the wrong part of the tellraw</li>
+  <li>Minion Pet would get a redundant bonus prefix in doubles mode</li>
+  <li>Attempting to update team coins while one of the teammates is in Spectator mode causes issues</li>
+  <li>Last player to die in Bombs Away! would sometimes die an extra-bonus time of fall damage</li>
+  <li>Players on a space traversed by an opponent with a Coin Thief would sometimes be just outside of it&#39;s effective radius</li>
+  <li>Players were able to hit the center space of Zen Garden multiple times on the same turn</li>
+</ul>
+</body>
+</html>
