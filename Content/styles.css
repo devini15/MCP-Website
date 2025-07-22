@@ -74,30 +74,30 @@ a:visited{color:yellow;}
     width:50%;
     align-self: center;
     background-color: #999999;
-    color: white;
+    color: black;
     text-align: center;
     text-decoration: none;
     border: none;
 }
 .mineButton:hover {
     background-color: #BBBBBB;
-    color: white;
+    color: black;
 }
 .mineButton:active {
     background-color: #777777;
 }
 .mineA{
-    color: white;
+    color: black;
     text-align: center;
     text-decoration: none;
 }
 .mineA:hover {
-    color: white;
+    color: black;
     background-color: #BBBBBB;
 }
 .mineA:active {background-color: #777777;}
 
-.mineA:visited {color:white}
+.mineA:visited {color:black}
 
 .fakeButton{
     width:50%;
