@@ -26,6 +26,12 @@ a:hover{color:deepskyblue;}
 a:active{color:red;}
 a:visited{color:yellow;}
 
+.pickpocketerText {
+    transition: opacity 0.6s ease;
+    text-shadow: 2px 0 #555, -2px 0 #555, 0 2px #555, 0 -2px #555,
+                 1px 1px #555, -1px -1px #555, 1px -1px #555, -1px 1px #555;
+}
+
 /*Changelog colors*/
 .additions {
     list-style-type: "+ ";

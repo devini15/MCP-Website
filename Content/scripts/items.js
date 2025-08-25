@@ -1,6 +1,6 @@
 document.querySelectorAll('.itemDiv').forEach(div => {
     let toggled = false;
-    const name= div.querySelector('.itemName')
+    var name = div.querySelector('.itemName');
     const text = div.querySelector('.description');
     const button = div.querySelector('.itemButton');
     const image = div.querySelector('.itemImage'); //If you want to modify the image, ALWAYS make sure it's not null first!
@@ -18,6 +18,11 @@ document.querySelectorAll('.itemDiv').forEach(div => {
     if(details !== null) {
         regDetail = regDetail.replace(/\\n/g, '<br/>');
         enhDetail = enhDetail.replace(/\\n/g, '<br/>');
+    }
+
+    //Sets the unique Pickpocketer and Pocket Plunderer HTML element (Needed for grey text background)
+    if(name === null) {
+        name = div.querySelector('.pickpocketerText');
     }
 
         button.addEventListener('click', () => {
