@@ -243,7 +243,7 @@ a:visited{color:yellow;}
     margin-bottom: 10px;
 }
 
-/* Optional button for full details */
+/* Button for full details */
 .boardButton {
     width: 50%;
     padding: 6px;
@@ -268,4 +268,74 @@ a:visited{color:yellow;}
 .boardDiv:hover .boardImage {
     filter: brightness(1.2);
     transition: filter 0.3s ease;
+}
+
+/* BOARD DETAILS PAGE STYLING */
+.board-details {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.board-section {
+    margin-bottom: 80px;
+}
+
+.board-header {
+    border: 3px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.board-image-large {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.board-title {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.board-description {
+    text-align: left;
+    font-size: 1.3em;
+    line-height: 1.6em;
+    margin-top: 20px;
+}
+
+/* Dual-image layout for Dusty Dunes */
+.dual-image {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.board-image-half {
+    width: 45%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Candyland special styling */
+.candyTitle span:nth-child(odd) { color: #FF5555; }   /* red */
+.candyTitle span:nth-child(even) { color: #FFFFFF; }  /* white */
+
+.board-header.candyBorder {
+    border: 3px solid transparent;
+    border-image: linear-gradient(90deg, #FF5555, #FFFFFF, #FF5555, #FFFFFF) 1;
+}
+
+/* Present palace special styling */
+.presentTitle span:nth-child(odd) { color: #00AA00; }   /* green */
+.presentTitle span:nth-child(even) { color: #AA0000; }  /* red */
+
+.board-header.presentBorder {
+    border: 3px solid transparent;
+    border-image: linear-gradient(90deg, #00AA00, #AA0000, #00AA00, #AA0000) 1;
 }
