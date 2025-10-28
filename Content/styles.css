@@ -339,3 +339,56 @@ a:visited{color:yellow;}
     border: 3px solid transparent;
     border-image: linear-gradient(90deg, #00AA00, #AA0000, #00AA00, #AA0000) 1;
 }
+
+/* ============ MINIGAMES PAGE STYLING ============ */
+
+.minigame-category {
+    border: 3px solid var(--cat-color, white);
+    border-radius: 12px;
+    margin: 40px auto;
+    padding: 25px;
+    width: 85%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.category-title {
+    font-size: 2em;
+    text-align: center;
+    color: var(--cat-color, white);
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px var(--cat-color, white);
+}
+
+.minigame-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.minigame-card {
+    background-color: #111;
+    border: 2px solid var(--cat-color, white);
+    border-radius: 10px;
+    width: 45%;
+    min-height: 120px;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.minigame-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px var(--cat-color, white);
+}
+
+.minigame-name {
+    font-size: 1.4em;
+    color: var(--cat-color, white);
+    margin-bottom: 5px;
+}
+
+.minigame-desc {
+    font-size: 1.1em;
+    color: #ddd;
+}
