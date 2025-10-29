@@ -367,14 +367,10 @@ a:visited{color:yellow;}
 }
 
 .minigame-card {
-    background-color: #111;
-    border: 2px solid var(--cat-color, white);
-    border-radius: 10px;
+    position: relative;
     width: 45%;
     min-height: 120px;
-    padding: 15px;
-    text-align: left;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    perspective: 1000px;
 }
 
 .minigame-card:hover {
@@ -391,4 +387,66 @@ a:visited{color:yellow;}
 .minigame-desc {
     font-size: 1.1em;
     color: #ddd;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    background-color: #111;
+    border: 2px solid var(--cat-color, white);
+    box-shadow: 0 0 0 var(--cat-color, white);
+}
+
+.minigame-card:hover .card-inner {
+    transform: rotateY(180deg);
+    box-shadow: 0 0 15px var(--cat-color, white);
+    transform-origin: center;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.card-front {
+    color: #ddd;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #111;
+    color: #ddd;
+    overflow-y: auto;
+}
+
+.card-back img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 140px;
+    margin: 150px 0 10px 0;
+}
+
+.card-back h4 {
+    color: var(--cat-color, white);
+    margin: 10px 0 5px;
+    text-shadow: 0 0 8px var(--cat-color, white);
+}
+
+.card-back ul {
+    margin-left: 18px;
+    font-size: 0.95em;
 }
