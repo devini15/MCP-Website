@@ -340,6 +340,54 @@ a:visited{color:yellow;}
     border-image: linear-gradient(90deg, #00AA00, #AA0000, #00AA00, #AA0000) 1;
 }
 
+/* Fort Suits special styling */
+.fortTitle span:nth-child(odd) {
+    color: #000000;
+    text-shadow:
+            1px 1px 0 white,
+            -1px 1px 0 white,
+            1px -1px 0 white,
+            -1px -1px 0 white;
+}
+.fortTitle span:nth-child(even) {
+    color: #AA0000;
+    text-shadow:
+            1px 1px 0 white,
+            -1px 1px 0 white,
+            1px -1px 0 white,
+            -1px -1px 0 white;
+}
+
+.fortTitle span {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    display: inline;
+}
+
+.board-header.fortBorder {
+    border: 3px solid transparent;
+    border-image: linear-gradient(90deg, #3B3B3B, #AA0000, #3B3B3B, #AA0000) 1;
+}
+
+.outlined-black {
+    color: #000000;
+    text-shadow:
+            1px 1px 0 white,
+            -1px 1px 0 white,
+            1px -1px 0 white,
+            -1px -1px 0 white;
+}
+
+.outlined-red {
+    color: #AA0000;
+    text-shadow:
+            1px 1px 0 white,
+            -1px 1px 0 white,
+            1px -1px 0 white,
+            -1px -1px 0 white;
+}
+
 /* ============ MINIGAMES PAGE STYLING ============ */
 
 .minigame-category {
