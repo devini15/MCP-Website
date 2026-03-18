@@ -498,3 +498,10 @@ a:visited{color:yellow;}
     margin-left: 18px;
     font-size: 0.95em;
 }
+
+.centered {
+    display:flex;
+    justify-content: center;
+    width: 100vw;
+    text-align: justify;
+}
