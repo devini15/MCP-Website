@@ -322,6 +322,12 @@ a:visited{color:yellow;}
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.boardBonusStars {
+    font-size: 0.8em;
+    color: #cccccc;
+    margin: 4px 0 8px 0;
+}
+
 /* Candyland special styling */
 .candyTitle span:nth-child(odd) { color: #FF5555; }   /* red */
 .candyTitle span:nth-child(even) { color: #FFFFFF; }  /* white */
