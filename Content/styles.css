@@ -488,6 +488,7 @@ a:visited{color:yellow;}
     background-color: #111;
     color: #ddd;
     overflow-y: auto;
+    justify-content:flex-start;
 }
 
 .card-back img {
@@ -495,7 +496,7 @@ a:visited{color:yellow;}
     border-radius: 8px;
     object-fit: cover;
     max-height: 140px;
-    margin: 150px 0 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .card-back h4 {
