@@ -366,6 +366,7 @@
 <div id="music-player">
   <button id="btn-prev">⏮</button>
   <button id="btn-mute">🔇</button>
+  <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1">
   <button id="btn-next">⏭</button>
   <span id="song-title">Loading...</span>
 </div>
@@ -508,11 +509,25 @@
     }
   });
 
+  const slider = document.getElementById("volume-slider");
+
   let muted = false;
   btnMute.addEventListener("click", () => {
     muted = !muted;
     audio.muted = muted;
     btnMute.textContent = muted ? "🔊" : "🔇";
+    slider.style.opacity = muted ? "0.4" : "1";
+  });
+
+  slider.addEventListener("input", () => {
+    audio.volume = slider.value;
+    // auto-unmute if they drag the slider
+    if (muted && slider.value > 0) {
+      muted = false;
+      audio.muted = false;
+      btnMute.textContent = "🔇";
+      slider.style.opacity = "1";
+    }
   });
 </script>
 </body>

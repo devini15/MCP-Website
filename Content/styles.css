@@ -239,6 +239,31 @@ a:visited{color:yellow;}
     color: #ccc;
 }
 
+#volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80px;
+    height: 6px;
+    background: #999;
+    outline: none;
+    cursor: pointer;
+}
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: white;
+    cursor: pointer;
+}
+#volume-slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: white;
+    cursor: pointer;
+    border: none;
+}
+
 /* push page content up so player doesn't cover it */
 body {
     padding-bottom: 60px;
