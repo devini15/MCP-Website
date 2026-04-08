@@ -55,11 +55,13 @@ Decider - Randomly selected board.<br/>
 <text class="gold">Pick</text>&ensp;
 <text class="aqua">Pick</text>&ensp;
 <text class="green">Decider</text>
+
 <div id="music-player">
     <button id="btn-prev">⏮</button>
+    <button id="btn-play">▶</button>
+    <button id="btn-next">⏭</button>
     <button id="btn-mute">🔇</button>
     <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1">
-    <button id="btn-next">⏭</button>
     <span id="song-title">Loading...</span>
 </div>
 
@@ -67,65 +69,64 @@ Decider - Randomly selected board.<br/>
 
 <script>
     const songs = [
-        "assets/music/Airborne Isles.ogg",
-        "assets/music/Airborne Isles (Last 5 Turns).ogg",
-        "assets/music/All-Out Strike.ogg",
-        "assets/music/Arcane Atoll.ogg",
-        "assets/music/Arcane Atoll (Last 5 Turns).ogg",
-        "assets/music/Candyland.ogg",
-        "assets/music/Candyland (Last 5 Turns).ogg",
-        "assets/music/Center Park.ogg",
-        "assets/music/Center Park (Last 5 Turns).ogg",
-        "assets/music/Cut Through the Wind.ogg",
-        "assets/music/Dusty Dunes Day.ogg",
-        "assets/music/Dusty Dunes Day (Last 5 Turns).ogg",
-        "assets/music/Dusty Dunes Night.ogg",
-        "assets/music/Dusty Dunes Night (Last 5 Turns).ogg",
-        "assets/music/Fort Suits.ogg",
-        "assets/music/Fort Suits (Last 5 Turns).ogg",
-        "assets/music/Grand Prix.ogg",
-        "assets/music/Happier Together.ogg",
-        "assets/music/Hurry! Hurry!.ogg",
-        "assets/music/Hurry-Scurry.ogg",
-        "assets/music/Keep Going!.ogg",
-        "assets/music/Last Minute Thrills.ogg",
-        "assets/music/Let's Make Some Money.ogg",
-        "assets/music/Lofty Luncheon.ogg",
-        "assets/music/Lofty Luncheon (Last 5 Turns).ogg",
-        "assets/music/Lost City Day.ogg",
-        "assets/music/Lost City Day (Last 5 Turns).ogg",
-        "assets/music/Lost City Night.ogg",
-        "assets/music/Lost City Night (Last 5 Turns).ogg",
-        "assets/music/Main Theme.ogg",
-        "assets/music/Mooshroom Grotto.ogg",
-        "assets/music/Mooshroom Grotto (Last 5 Turns).ogg",
-        "assets/music/No Time to Worry.ogg",
-        "assets/music/Pac-Maze.ogg",
-        "assets/music/Pac-Maze (Last 5 Turns).ogg",
-        "assets/music/Panic, but Carefully.ogg",
-        "assets/music/Pipe Canyon.ogg",
-        "assets/music/Pipe Canyon (Last 5 Turns).ogg",
-        "assets/music/Port Town.ogg",
-        "assets/music/Port Town (Last 5 Turns).ogg",
-        "assets/music/Present Palace.ogg",
-        "assets/music/Present Palace (Last 5 Turns).ogg",
-        "assets/music/Proceed with Caution.ogg",
-        "assets/music/Quickplay Room.ogg",
-        "assets/music/Quickplay Room Night.ogg",
-        "assets/music/Rhythmic Room.ogg",
-        "assets/music/Rhythmic Room (Last 5 Turns).ogg",
-        "assets/music/Roll Off.ogg",
-        "assets/music/Rolling in the Dough.ogg",
-        "assets/music/Run Away! Run Away!.ogg",
-        "assets/music/Slowly Yet Surely.ogg",
-        "assets/music/Suburbia Scramble.ogg",
-        "assets/music/Suburbia Scramble (Last 5 Turns).ogg",
-        "assets/music/Waltzing Round and Round.ogg",
-        "assets/music/Zen Garden.ogg",
-        "assets/music/Zen Garden (Last 5 Turns).ogg",
+        "../assets/music/Airborne Isles.ogg",
+        "../assets/music/Airborne Isles (Last 5 Turns).ogg",
+        "../assets/music/All-Out Strike.ogg",
+        "../assets/music/Arcane Atoll.ogg",
+        "../assets/music/Arcane Atoll (Last 5 Turns).ogg",
+        "../assets/music/Candyland.ogg",
+        "../assets/music/Candyland (Last 5 Turns).ogg",
+        "../assets/music/Center Park.ogg",
+        "../assets/music/Center Park (Last 5 Turns).ogg",
+        "../assets/music/Cut Through the Wind.ogg",
+        "../assets/music/Dusty Dunes Day.ogg",
+        "../assets/music/Dusty Dunes Day (Last 5 Turns).ogg",
+        "../assets/music/Dusty Dunes Night.ogg",
+        "../assets/music/Dusty Dunes Night (Last 5 Turns).ogg",
+        "../assets/music/Fort Suits.ogg",
+        "../assets/music/Fort Suits (Last 5 Turns).ogg",
+        "../assets/music/Grand Prix.ogg",
+        "../assets/music/Happier Together.ogg",
+        "../assets/music/Hurry! Hurry!.ogg",
+        "../assets/music/Hurry-Scurry.ogg",
+        "../assets/music/Keep Going!.ogg",
+        "../assets/music/Last Minute Thrills.ogg",
+        "../assets/music/Let's Make Some Money.ogg",
+        "../assets/music/Lofty Luncheon.ogg",
+        "../assets/music/Lofty Luncheon (Last 5 Turns).ogg",
+        "../assets/music/Lost City Day.ogg",
+        "../assets/music/Lost City Day (Last 5 Turns).ogg",
+        "../assets/music/Lost City Night.ogg",
+        "../assets/music/Lost City Night (Last 5 Turns).ogg",
+        "../assets/music/Main Theme.ogg",
+        "../assets/music/Mooshroom Grotto.ogg",
+        "../assets/music/Mooshroom Grotto (Last 5 Turns).ogg",
+        "../assets/music/No Time to Worry.ogg",
+        "../assets/music/Pac-Maze.ogg",
+        "../assets/music/Pac-Maze (Last 5 Turns).ogg",
+        "../assets/music/Panic, but Carefully.ogg",
+        "../assets/music/Pipe Canyon.ogg",
+        "../assets/music/Pipe Canyon (Last 5 Turns).ogg",
+        "../assets/music/Port Town.ogg",
+        "../assets/music/Port Town (Last 5 Turns).ogg",
+        "../assets/music/Present Palace.ogg",
+        "../assets/music/Present Palace (Last 5 Turns).ogg",
+        "../assets/music/Proceed with Caution.ogg",
+        "../assets/music/Quickplay Room.ogg",
+        "../assets/music/Quickplay Room Night.ogg",
+        "../assets/music/Rhythmic Room.ogg",
+        "../assets/music/Rhythmic Room (Last 5 Turns).ogg",
+        "../assets/music/Roll Off.ogg",
+        "../assets/music/Rolling in the Dough.ogg",
+        "../assets/music/Run Away! Run Away!.ogg",
+        "../assets/music/Slowly Yet Surely.ogg",
+        "../assets/music/Suburbia Scramble.ogg",
+        "../assets/music/Suburbia Scramble (Last 5 Turns).ogg",
+        "../assets/music/Waltzing Round and Round.ogg",
+        "../assets/music/Zen Garden.ogg",
+        "../assets/music/Zen Garden (Last 5 Turns).ogg",
     ];
 
-    // Shuffle array using Fisher-Yates
     function shuffle(arr) {
         const a = [...arr];
         for (let i = a.length - 1; i > 0; i--) {
@@ -138,14 +139,29 @@ Decider - Randomly selected board.<br/>
     const audio = document.getElementById("bg-audio");
     const titleEl = document.getElementById("song-title");
     const btnMute = document.getElementById("btn-mute");
+    const btnPlay = document.getElementById("btn-play");
+    const slider = document.getElementById("volume-slider");
 
-    // Restore or create shuffled queue
+    // Restore queue
     let queue = JSON.parse(sessionStorage.getItem("musicQueue") || "null");
     let index = parseInt(sessionStorage.getItem("musicIndex") || "0");
     if (!queue) {
         queue = shuffle(songs);
         sessionStorage.setItem("musicQueue", JSON.stringify(queue));
     }
+
+    // Restore persistent state
+    let isPlaying = sessionStorage.getItem("musicPlaying") === "true"; // default paused
+    let isMuted = sessionStorage.getItem("musicMuted") === "true";
+    let volume = parseFloat(sessionStorage.getItem("musicVolume") ?? "1");
+
+    // Apply restored state to UI
+    audio.volume = volume;
+    audio.muted = isMuted;
+    slider.value = volume;
+    slider.style.opacity = isMuted ? "0.4" : "1";
+    btnMute.textContent = isMuted ? "🔊" : "🔇";
+    btnPlay.textContent = isPlaying ? "⏸" : "▶";
 
     function getSongName(path) {
         return path.split("/").pop().replace(".ogg", "").replace(/_/g, " ");
@@ -157,23 +173,30 @@ Decider - Randomly selected board.<br/>
         audio.src = queue[index];
         titleEl.textContent = "♪ " + getSongName(queue[index]);
         audio.load();
+
         if (resume) {
             const t = parseFloat(sessionStorage.getItem("musicTime") || "0");
             audio.currentTime = t;
         }
-        audio.play().catch(() => {});
+
+        if (isPlaying) {
+            audio.play().catch(() => {
+                // autoplay blocked, wait for interaction
+                isPlaying = false;
+                sessionStorage.setItem("musicPlaying", "false");
+                btnPlay.textContent = "▶";
+            });
+        }
     }
 
-    // Resume across page loads
-    const savedIndex = parseInt(sessionStorage.getItem("musicIndex") || "0");
-    loadSong(savedIndex, true);
+    loadSong(index, true);
 
     // Save position every second
     setInterval(() => {
         if (!audio.paused) sessionStorage.setItem("musicTime", audio.currentTime);
     }, 1000);
 
-    // Auto-advance and reshuffle when queue exhausted
+    // Auto-advance
     audio.addEventListener("ended", () => {
         const next = index + 1;
         if (next >= queue.length) {
@@ -186,13 +209,28 @@ Decider - Randomly selected board.<br/>
         sessionStorage.setItem("musicTime", 0);
     });
 
+    // Play/pause
+    btnPlay.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play().catch(() => {});
+            isPlaying = true;
+            btnPlay.textContent = "⏸";
+        } else {
+            audio.pause();
+            isPlaying = false;
+            btnPlay.textContent = "▶";
+        }
+        sessionStorage.setItem("musicPlaying", isPlaying);
+    });
+
+    // Next
     document.getElementById("btn-next").addEventListener("click", () => {
         loadSong(index + 1, false);
         sessionStorage.setItem("musicTime", 0);
     });
 
+    // Prev
     document.getElementById("btn-prev").addEventListener("click", () => {
-        // restart current song if >3s in, else go back
         if (audio.currentTime > 3) {
             audio.currentTime = 0;
         } else {
@@ -201,24 +239,26 @@ Decider - Randomly selected board.<br/>
         }
     });
 
-    const slider = document.getElementById("volume-slider");
-
-    let muted = false;
+    // Mute
     btnMute.addEventListener("click", () => {
-        muted = !muted;
-        audio.muted = muted;
-        btnMute.textContent = muted ? "🔊" : "🔇";
-        slider.style.opacity = muted ? "0.4" : "1";
+        isMuted = !isMuted;
+        audio.muted = isMuted;
+        btnMute.textContent = isMuted ? "🔊" : "🔇";
+        slider.style.opacity = isMuted ? "0.4" : "1";
+        sessionStorage.setItem("musicMuted", isMuted);
     });
 
+    // Volume
     slider.addEventListener("input", () => {
-        audio.volume = slider.value;
-        // auto-unmute if they drag the slider
-        if (muted && slider.value > 0) {
-            muted = false;
+        volume = parseFloat(slider.value);
+        audio.volume = volume;
+        sessionStorage.setItem("musicVolume", volume);
+        if (isMuted && volume > 0) {
+            isMuted = false;
             audio.muted = false;
             btnMute.textContent = "🔇";
             slider.style.opacity = "1";
+            sessionStorage.setItem("musicMuted", false);
         }
     });
 </script>

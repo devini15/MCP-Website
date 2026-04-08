@@ -179,11 +179,13 @@
 
     <script src="scripts/items.js"></script>
     <a class="nav" href="index.html">Home</a>
+
 <div id="music-player">
     <button id="btn-prev">⏮</button>
+    <button id="btn-play">▶</button>
+    <button id="btn-next">⏭</button>
     <button id="btn-mute">🔇</button>
     <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1">
-    <button id="btn-next">⏭</button>
     <span id="song-title">Loading...</span>
 </div>
 
@@ -249,7 +251,6 @@
         "assets/music/Zen Garden (Last 5 Turns).ogg",
     ];
 
-    // Shuffle array using Fisher-Yates
     function shuffle(arr) {
         const a = [...arr];
         for (let i = a.length - 1; i > 0; i--) {
@@ -262,14 +263,29 @@
     const audio = document.getElementById("bg-audio");
     const titleEl = document.getElementById("song-title");
     const btnMute = document.getElementById("btn-mute");
+    const btnPlay = document.getElementById("btn-play");
+    const slider = document.getElementById("volume-slider");
 
-    // Restore or create shuffled queue
+    // Restore queue
     let queue = JSON.parse(sessionStorage.getItem("musicQueue") || "null");
     let index = parseInt(sessionStorage.getItem("musicIndex") || "0");
     if (!queue) {
         queue = shuffle(songs);
         sessionStorage.setItem("musicQueue", JSON.stringify(queue));
     }
+
+    // Restore persistent state
+    let isPlaying = sessionStorage.getItem("musicPlaying") === "true"; // default paused
+    let isMuted = sessionStorage.getItem("musicMuted") === "true";
+    let volume = parseFloat(sessionStorage.getItem("musicVolume") ?? "1");
+
+    // Apply restored state to UI
+    audio.volume = volume;
+    audio.muted = isMuted;
+    slider.value = volume;
+    slider.style.opacity = isMuted ? "0.4" : "1";
+    btnMute.textContent = isMuted ? "🔊" : "🔇";
+    btnPlay.textContent = isPlaying ? "⏸" : "▶";
 
     function getSongName(path) {
         return path.split("/").pop().replace(".ogg", "").replace(/_/g, " ");
@@ -281,23 +297,30 @@
         audio.src = queue[index];
         titleEl.textContent = "♪ " + getSongName(queue[index]);
         audio.load();
+
         if (resume) {
             const t = parseFloat(sessionStorage.getItem("musicTime") || "0");
             audio.currentTime = t;
         }
-        audio.play().catch(() => {});
+
+        if (isPlaying) {
+            audio.play().catch(() => {
+                // autoplay blocked, wait for interaction
+                isPlaying = false;
+                sessionStorage.setItem("musicPlaying", "false");
+                btnPlay.textContent = "▶";
+            });
+        }
     }
 
-    // Resume across page loads
-    const savedIndex = parseInt(sessionStorage.getItem("musicIndex") || "0");
-    loadSong(savedIndex, true);
+    loadSong(index, true);
 
     // Save position every second
     setInterval(() => {
         if (!audio.paused) sessionStorage.setItem("musicTime", audio.currentTime);
     }, 1000);
 
-    // Auto-advance and reshuffle when queue exhausted
+    // Auto-advance
     audio.addEventListener("ended", () => {
         const next = index + 1;
         if (next >= queue.length) {
@@ -310,13 +333,28 @@
         sessionStorage.setItem("musicTime", 0);
     });
 
+    // Play/pause
+    btnPlay.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play().catch(() => {});
+            isPlaying = true;
+            btnPlay.textContent = "⏸";
+        } else {
+            audio.pause();
+            isPlaying = false;
+            btnPlay.textContent = "▶";
+        }
+        sessionStorage.setItem("musicPlaying", isPlaying);
+    });
+
+    // Next
     document.getElementById("btn-next").addEventListener("click", () => {
         loadSong(index + 1, false);
         sessionStorage.setItem("musicTime", 0);
     });
 
+    // Prev
     document.getElementById("btn-prev").addEventListener("click", () => {
-        // restart current song if >3s in, else go back
         if (audio.currentTime > 3) {
             audio.currentTime = 0;
         } else {
@@ -325,24 +363,26 @@
         }
     });
 
-    const slider = document.getElementById("volume-slider");
-
-    let muted = false;
+    // Mute
     btnMute.addEventListener("click", () => {
-        muted = !muted;
-        audio.muted = muted;
-        btnMute.textContent = muted ? "🔊" : "🔇";
-        slider.style.opacity = muted ? "0.4" : "1";
+        isMuted = !isMuted;
+        audio.muted = isMuted;
+        btnMute.textContent = isMuted ? "🔊" : "🔇";
+        slider.style.opacity = isMuted ? "0.4" : "1";
+        sessionStorage.setItem("musicMuted", isMuted);
     });
 
+    // Volume
     slider.addEventListener("input", () => {
-        audio.volume = slider.value;
-        // auto-unmute if they drag the slider
-        if (muted && slider.value > 0) {
-            muted = false;
+        volume = parseFloat(slider.value);
+        audio.volume = volume;
+        sessionStorage.setItem("musicVolume", volume);
+        if (isMuted && volume > 0) {
+            isMuted = false;
             audio.muted = false;
             btnMute.textContent = "🔇";
             slider.style.opacity = "1";
+            sessionStorage.setItem("musicMuted", false);
         }
     });
 </script>
