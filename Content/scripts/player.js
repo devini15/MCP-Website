@@ -88,7 +88,7 @@
     audio.muted = isMuted;
     slider.value = volume;
     slider.style.opacity = isMuted ? "0.4" : "1";
-    btnMute.textContent = isMuted ? "🔊" : "🔇";
+    btnMute.textContent = isMuted ? "🔇" : "🔊";
     btnPlay.textContent = isPlaying ? "⏸" : "▶";
 
     function getSongName(path) {
@@ -164,7 +164,7 @@
     btnMute.addEventListener("click", () => {
         isMuted = !isMuted;
         audio.muted = isMuted;
-        btnMute.textContent = isMuted ? "🔊" : "🔇";
+        btnMute.textContent = isMuted ? "🔇" : "🔊";
         slider.style.opacity = isMuted ? "0.4" : "1";
         localStorage.setItem("musicMuted", isMuted);
     });
@@ -176,7 +176,7 @@
         if (isMuted && volume > 0) {
             isMuted = false;
             audio.muted = false;
-            btnMute.textContent = "🔇";
+            btnMute.textContent = "🔊";
             slider.style.opacity = "1";
             localStorage.setItem("musicMuted", false);
         }
