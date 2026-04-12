@@ -200,6 +200,87 @@ a:visited{color:yellow;}
 
 }
 
+/* ============ MUSIC PLAYER ============ */
+#music-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    border-top: 3px solid white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    font-family: "Minecraft Seven v2", sans-serif;
+    font-size: 0.85em;
+    color: white;
+}
+
+#music-player button {
+    background: #999;
+    color: black;
+    border: none;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+}
+#music-player button:hover { background: #bbb; }
+#music-player button:active { background: #777; }
+
+#song-title {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ccc;
+}
+
+#volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80px;
+    height: 6px;
+    background: #999;
+    outline: none;
+    cursor: pointer;
+}
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: white;
+    cursor: pointer;
+}
+#volume-slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: white;
+    cursor: pointer;
+    border: none;
+}
+#ost-link {
+    color: black;
+    background: #999;
+    padding: 4px 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: inherit;
+    font-size: 1em;
+}
+#ost-link:hover { background: #bbb; color: black; }
+#ost-link:active { background: #777; color: black; }
+#ost-link:visited { color: black; }
+
+/* push page content up so player doesn't cover it */
+body {
+    padding-bottom: 60px;
+}
+
 /* === BOARD PAGE STYLES === */
 
 .boardDiv {

@@ -35,5 +35,20 @@
     <a class="nav" href="https://discord.gg/pEPxa3zywE">Discord</a>
     <br/><br/>
     <a class="nav" href="https://www.youtube.com/playlist?list=PLDLDwE5cgL2eWBSDaQYTJVFGxB1hu0yID">OST</a>
+    <br/><br/>
+
+    <div id="music-player">
+        <button id="btn-prev">⏮</button>
+        <button id="btn-play">▶</button>
+        <button id="btn-next">⏭</button>
+        <button id="btn-mute">🔊</button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1">
+        <span id="song-title">Loading...</span>
+        <a id="ost-link" href="https://www.youtube.com/playlist?list=PLDLDwE5cgL2eWBSDaQYTJVFGxB1hu0yID" target="_blank">▶ OST</a>
+    </div>
+
+    <audio id="bg-audio" preload="auto"></audio>
+
+    <script src="scripts/player.js"></script>
 </body>
 </html>

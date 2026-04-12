@@ -12,7 +12,7 @@
 <br/><br/>
 <h3>Preliminary</h3>
 Lean N' Mean vs Gold Chips - Sunday, April 12th at 21:00 CDT<br/>
-The Blockheads vs YlaTonma - Sunday, April 12th at 10:00 CDT<br/>
+The Blockheads vs YlaTonma - Sunday, April 12th at 12:00 CDT<br/>
 <h3>Quarterfinal</h3>
 Pocket Aces vs TBD - TBD<br/>
 Cat Owners vs The Nix-Knacks - TBD<br/>
@@ -22,5 +22,19 @@ Luck's Duality vs TBD - TBD<br/>
 <a href="../tourney/rules.html"><img src="../assets/tourney/RulesButton.png" alt="Rules"/></a>&ensp;
 <a href="../tourney/bracket.html"><img src="../assets/tourney/BracketButton.png" alt="Bracket"/></a>&ensp;
 <a href="../tourney/teams.html"><img src="../assets/tourney/TeamsButton.png" alt="Teams"/></a>
+
+<div id="music-player">
+    <button id="btn-prev">⏮</button>
+    <button id="btn-play">▶</button>
+    <button id="btn-next">⏭</button>
+    <button id="btn-mute">🔊</button>
+    <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1">
+    <span id="song-title">Loading...</span>
+    <a id="ost-link" href="https://www.youtube.com/playlist?list=PLDLDwE5cgL2eWBSDaQYTJVFGxB1hu0yID" target="_blank">▶ OST</a>
+</div>
+
+<audio id="bg-audio" preload="auto"></audio>
+
+<script src="../scripts/player.js"></script>
 </body>
 </html>
