@@ -597,3 +597,8 @@ body {
     width: 100vw;
     text-align: justify;
 }
+
+.gray-out{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
