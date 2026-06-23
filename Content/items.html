@@ -25,7 +25,7 @@
         <text class="description">Player can only roll 1-3 for their next roll. Can be activated on any player.</text>
         <div class="row" style="margin-top:auto">
             <button class="itemButton mineButton">Show Enhanced</button>
-            <div class = fakeButton><a class="mineA" href="item-details.html#test">Detailed Description</a></div>
+            <div class = mineButton><a class="mineA" href="item-details.html#test">Detailed Description</a></div>
         </div>
     </div>
 
@@ -40,7 +40,7 @@
         <text class="description">Allows you to choose how many spaces you or another player will move on their next turn. Can only choose numbers 1-10.</text>
         <div class="row" style="margin-top:auto">
             <button class="itemButton mineButton">Show Enhanced</button>
-            <div class="fakeButton"><a class="mineA" href="item-details.html#test2">Detailed Description</a></div>
+            <div class="mineButton"><a class="mineA" href="item-details.html#test2">Detailed Description</a></div>
         </div>
     </div>
 </div>
@@ -58,7 +58,7 @@
         <text class="description">Player uses two dice for their next roll. Can be activated on any player.</text>
         <div class="row" style="margin-top:auto">
             <button class="itemButton mineButton">Show Enhanced</button>
-            <div class = fakeButton><a class="mineA" href="item-details.html#test">Detailed Description</a></div>
+            <div class = mineButton><a class="mineA" href="item-details.html#test">Detailed Description</a></div>
         </div>
     </div>
 
@@ -73,7 +73,7 @@
         <text class="description">Player uses three dice for their next roll. Can be activated on any player.</text>
         <div class="row" style="margin-top:auto">
             <button class="itemButton mineButton">Show Enhanced</button>
-            <div class = fakeButton><a class="mineA" href="item-details.html#test">Detailed Description</a></div>
+            <div class = mineButton><a class="mineA" href="item-details.html#test">Detailed Description</a></div>
         </div>
     </div>
 </div>
@@ -91,7 +91,7 @@
         <text class="description">Allows you to move through any blocked off path on your turn, makes you immune to traps, and adds 3 to your next roll.</text>
         <div class="row" style="margin-top:auto">
             <button class="itemButton mineButton">Show Enhanced</button>
-            <div class=fakeButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
         </div>
     </div>
 
@@ -106,7 +106,7 @@
         <text class="description">Choose any player to swap board positions with.</text>
         <div class="row" style="margin-top:auto">
             <button class="itemButton mineButton">Show Enhanced</button>
-            <div class=fakeButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
         </div>
     </div>
 </div>
@@ -124,7 +124,7 @@
         <text class="description">Allows you to redo your last roll. Can be used after the maximum items per turn limit is reached.</text>
         <div class="row" style="margin-top:auto">
             <button class="itemButton mineButton">Show Enhanced</button>
-            <div class=fakeButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
         </div>
     </div>
 
@@ -139,7 +139,7 @@
         <text class="description">Allows you to buy two stars at a time when crossing the main star seller. You must pay for both stars.</text>
         <div class="row" style="margin-top:auto">
             <button class="itemButton mineButton">Show Enhanced</button>
-            <div class=fakeButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
         </div>
     </div>
 </div>
@@ -157,7 +157,7 @@
         <text class="description">Steal 6 coins from another player of your choice.</text>
         <div class="row" style="margin-top:auto">
             <button class="itemButton mineButton">Show Enhanced</button>
-            <div class=fakeButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
         </div>
     </div>
 
@@ -172,7 +172,145 @@
         <text class="description">Passive ability. Upon activation, steals 10 coins from every player that you pass on the board. Expires after 3 turns.</text>
         <div class="row" style="margin-top:auto">
             <button class="itemButton mineButton">Show Enhanced</button>
-            <div class=fakeButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Turn Skipper and Warp To Star -->
+<div class="row">
+    <div class="itemDiv" regular-name="Turn Skipper" enhanced-name="Turn Stealer"
+         regular-text="Skip any player's next turn."
+         enhanced-text="Steal another player's next turn of your choice. Your turn will start at their spot and you will move their pawn."
+         regular-texture="assets/items/TurnSkipper.ico" enhanced-texture="assets/items/TurnSkipper.ico">
+        <div>
+            <img class="itemImage" src="assets/items/TurnSkipper.ico" alt="Turn Skipper Texture"/>
+            <b class="itemName" style="color:#FF5555">Turn Skipper</b>
+        </div>
+        <text class="description">Skip any player's next turn.</text>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+        </div>
+    </div>
+
+    <div class="itemDiv" regular-name="Warp To Star" enhanced-name="Pocket Plunderer"
+         regular-text="Teleports you to the main star seller, but you still have to pay for the star."
+         enhanced-text="Teleports you to the main star seller and gives you any coins needed to buy a star."
+         regular-texture="assets/items/WarpToStar.ico" enhanced-texture="assets/items/WarpToStar.ico">
+        <div>
+            <img class="itemImage" src="assets/items/WarpToStar.ico" alt="Warp To Star Texture"/>
+            <b class="itemName" style="color:#55FF55">Warp To Star</b>
+        </div>
+        <text class="description">Teleports you to the main star seller, but you still have to pay for the star.</text>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Star Stealer and Crazy Clock -->
+<div class="row">
+    <div class="itemDiv" regular-name="Star Stealer" enhanced-name="Star Counterfeiter"
+         regular-text="Allows you to steal one star from another player. Bonus stars are unaffected by this item."
+         enhanced-text="Steals one star from a player of your choice and duplicates it. Bonus stars are unaffected by this item."
+         regular-texture="assets/items/StarStealer.ico" enhanced-texture="assets/items/StarStealer.ico">
+        <div>
+            <img class="itemImage" src="assets/items/StarStealer.ico" alt="Star Stealer Texture"/>
+            <b class="itemName" style="color:#FF55FF">Star Stealer</b>
+        </div>
+        <text class="description">Allows you to steal one star from another player. Bonus stars are unaffected by this item.</text>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+        </div>
+    </div>
+
+    <div class="itemDiv" regular-name="Crazy Clock" enhanced-name="Cuckoo Clock"
+         regular-text="Turn Mode: Sets the game to the last five turns and runs a special event after the current turn is over.<br>
+         Star Race Mode: Increases the number of stars to win by 1 if a special event has occurred. Decreases the number of stars to win by 1 if a special event has not occurred.<br>
+         Only one player can hold a crazy clock at a time."
+         enhanced-text="Turn Mode: Select the next turn number. Choose any turn between the last 7 turns and the last 3 turns. Runs a special event after the current turn is over.<br>
+         Star Race Mode: Increases the number of stars to win by 2 if a special event has occurred. Decreases the number of stars to win by 2 if a special event has not occurred.<br>
+         Only one player can hold a crazy clock at a time."
+         regular-texture="assets/items/CrazyClock.ico" enhanced-texture="assets/items/CrazyClock.ico">
+        <div>
+            <img class="itemImage" src="assets/items/CrazyClock.ico" alt="Crazy Clock Texture"/>
+            <b class="itemName" style="color:#FFAA00">Crazy Clock</b>
+        </div>
+        <text class="description">Turn Mode: Sets the game to the last five turns and runs a special event after the current turn is over.<br>
+         Star Race Mode: Increases the number of stars to win by 1 if a special event has occurred. Decreases the number of stars to win by 1 if a special event has not occurred.<br>
+         Only one player can hold a crazy clock at a time.</text>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Fire Trap and Lightning Trap -->
+<div class="row">
+    <div class="itemDiv" regular-name="Fire Trap" enhanced-name="Inferno Trap"
+         regular-text="Any foe that crosses this trap loses 1 coint for every spot passed for the remainder of their turn. Expires after 3 uses."
+         enhanced-text="Any foe that crosses this trap loses 2 coins for every spot passed for the remainder of their turn. Expires after 3 uses."
+         regular-texture="assets/items/FireTrap.ico" enhanced-texture="assets/items/FireTrap.ico">
+        <div>
+            <img class="itemImage" src="assets/items/FireTrap.ico" alt="Fire Trap Texture"/>
+            <b class="itemName" style="color:#FFAA00">Fire Trap</b>
+        </div>
+        <text class="description">Any foe that crosses this trap loses 1 coint for every spot passed for the remainder of their turn. Expires after 3 uses.</text>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+        </div>
+    </div>
+
+    <div class="itemDiv" regular-name="Zap Trap" enhanced-name="Lightning Trap"
+         regular-text="Any foe that crosses this trap gets zapped and gives 2 coins to the trap setter for evvery spot they pass until the end of their turn. This is a single use trap."
+         enhanced-text="Any foe that crosses this trap gets zapped and gives 3 coins to the trap setter for evvery spot they pass until the end of their turn. This is a single use trap."
+         regular-texture="assets/items/LightningTrap.ico" enhanced-texture="assets/items/LightningTrap.ico">
+        <div>
+            <img class="itemImage" src="assets/items/LightningTrap.ico" alt="Zap Trap Texture"/>
+            <b class="itemName" style="color:#FFFF55">Zap Trap</b>
+        </div>
+        <text class="description">Any foe that crosses this trap gets zapped and gives 2 coins to the trap setter for every spot they pass until the end of their turn. This is a single use trap.</text>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Anvil Trap and Ender Trap -->
+<div class="row">
+    <div class="itemDiv" regular-name="Anvil Trap" enhanced-name="Anvil Death Trap"
+         regular-text="Any foe that lands on this trap gives the trap setter 10 coins."
+         enhanced-text="Any foe that lands on this trap gives the trap setter half of their coins (minimum of 10)."
+         regular-texture="assets/items/AnvilTrap.ico" enhanced-texture="assets/items/AnvilTrap.ico">
+        <div>
+            <img class="itemImage" src="assets/items/AnvilTrap.ico" alt="Anvil Trap Texture"/>
+            <b class="itemName" style="color:#555555">Anvil Trap</b>
+        </div>
+        <text class="description">Any foe that lands on this trap gives the trap setter 10 coins.</text>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+        </div>
+    </div>
+
+    <div class="itemDiv" regular-name="Ender Trap" enhanced-name="Ender Aura Trap"
+         regular-text="Any foe that lands on this trap gets sent back to the start of the board and the spot landing event does not occur. This is a single use trap."
+         enhanced-text="Any foe that lands within one space of this trap gets sent back to the start of the board. This is a single use trap."
+         regular-texture="assets/items/EnderTrap.ico" enhanced-texture="assets/items/EnderTrap.ico">
+        <div>
+            <img class="itemImage" src="assets/items/EnderTrap.ico" alt="Ender Trap Texture"/>
+            <b class="itemName" style="color:#005555">Ender Trap</b>
+        </div>
+        <text class="description">Any foe that lands on this trap gets sent back to the start of the board and the spot landing event does not occur. This is a single use trap.</text>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
         </div>
     </div>
 </div>
