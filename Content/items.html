@@ -113,30 +113,29 @@
 
 <!-- Reroll Token & Star Voucher -->
 <div class="row">
-    <div class="itemDiv" regular-name="Reroll Token" enhanced-name="Premium Reroll Token"
-         regular-text="Allows you to redo your last roll. Can be used after rthe maximum items per turn limit is reached."
-         enhanced-text="Lets you roll the dice again. After rerolling, can choose to keep your new roll or take your original roll. Can be used after the maximum items per turn limit is reached."
-         regular-texture="assets/items/RerollToken.ico" enhanced-texture="assets/items/RerollToken.ico">
-        <div>
-            <img class="itemImage" src="assets/items/RerollToken.ico" alt="Reroll Token Texture"/>
-            <b class="itemName" style="color:#0000ff">Reroll Token</b>
-        </div>
-        <text class="description">Allows you to redo your last roll. Can be used after the maximum items per turn limit is reached.</text>
-        <div class="row" style="margin-top:auto">
-            <button class="itemButton mineButton">Show Enhanced</button>
-            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
-        </div>
-    </div>
-
-    <div class="itemDiv" regular-name="Double Star Voucher" enhanced-name="Triple Star Voucher"
+    <div class="itemDiv" regular-name="Double Star Voucher" enhanced-name="Double Star Discount Voucher"
          regular-text="Allows you to buy two stars at a time when crossing the main star seller. You must pay for both stars."
-         enhanced-text="Allows you to buy three stars at a time for the cost of one from the main star seller."
-         regular-texture="assets/items/DoubleStarVoucher.ico" enhanced-texture="assets/items/TripleStarVoucher.ico">
+         enhanced-text="Allows you to buy two stars at a time for the cost of one from the main star seller."
+         regular-texture="assets/items/DoubleStarVoucher.ico" enhanced-texture="assets/items/DoubleStarVoucher.ico">
         <div>
             <img class="itemImage" src="assets/items/DoubleStarVoucher.ico" alt="Double Star Voucher Texture"/>
             <b class="itemName" style="color:#FFE099">Double Star Voucher</b>
         </div>
         <text class="description">Allows you to buy two stars at a time when crossing the main star seller. You must pay for both stars.</text>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+        </div>
+    </div>
+    <div class="itemDiv" regular-name="Triple Star Voucher" enhanced-name="Triple Star Discount Voucher"
+         regular-text="Allows you to buy three stars at a time when crossing the main star seller. You must pay for all three stars."
+         enhanced-text="Allows you to buy three stars at a time for the cost of one from the main star seller."
+         regular-texture="assets/items/TripleStarVoucher.ico" enhanced-texture="assets/items/TripleStarVoucher.ico">
+        <div>
+            <img class="itemImage" src="assets/items/TripleStarVoucher.ico" alt="Triple Star Voucher Texture"/>
+            <b class="itemName" style="color:#FFE099">Triple Star Voucher</b>
+        </div>
+        <text class="description">Allows you to buy three stars at a time when crossing the main star seller. You must pay for all three stars.</text>
         <div class="row" style="margin-top:auto">
             <button class="itemButton mineButton">Show Enhanced</button>
             <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
@@ -478,8 +477,38 @@
     </div>
 </div>
 
-<!-- Goodie Bag -->
+<!-- Goodie Bag and Reroll Token -->
+<div class="row">
+    <div class="itemDiv" regular-name="Goodie Bag" enhanced-name="Treasure Bag"
+         regular-text="Instantly gives you three random items. Can give any item except for Star Stealers, Crazy Clocks, and Star Vouchers."
+         enhanced-text="Instantly gives you three random enhanced items. Can give any item except for Star Counterfeiters, Cuckoo Clocks, and Star Vouchers."
+         regular-texture="assets/items/GoodieBag.ico" enhanced-texture="assets/items/GoodieBag.ico">
+        <div>
+            <img class="itemImage" src="assets/items/GoodieBag.ico" alt="Goodie Bag Texture"/>
+            <b class="itemName" style="color:#FFFFFF ">Goodie Bag</b>
+        </div>
+        <text class="description">Instantly gives you three random items. Can give any item except for Star Stealers, Crazy Clocks, and Star Vouchers.</text>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+        </div>
+    </div>
 
+    <div class="itemDiv" regular-name="Reroll Token" enhanced-name="Premium Reroll Token"
+         regular-text="Allows you to redo your last roll. Can be used after rthe maximum items per turn limit is reached."
+         enhanced-text="Lets you roll the dice again. After rerolling, can choose to keep your new roll or take your original roll. Can be used after the maximum items per turn limit is reached."
+         regular-texture="assets/items/RerollToken.ico" enhanced-texture="assets/items/RerollToken.ico">
+        <div>
+            <img class="itemImage" src="assets/items/RerollToken.ico" alt="Reroll Token Texture"/>
+            <b class="itemName" style="color:#0000ff">Reroll Token</b>
+        </div>
+        <text class="description">Allows you to redo your last roll. Can be used after the maximum items per turn limit is reached.</text>
+        <div class="row" style="margin-top:auto">
+            <button class="itemButton mineButton">Show Enhanced</button>
+            <div class=mineButton><a class="mineA" href="item-details.html">Detailed Description</a></div>
+        </div>
+    </div>
+</div>
 
 <script src="scripts/items.js"></script>
 <a class="nav" href="index.html">Home</a>
